@@ -1,0 +1,16 @@
+import './assets/stylesheets/styles.scss';
+
+import React from 'react'; // import the main react dependency
+import ReactDOM from 'react-dom'; // import reactDOM
+import App from './app/App.jsx'; // import the main app component
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import AppStore from './app/redux/reducers'
+let store = createStore(AppStore, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+ReactDOM.render(
+	<Provider store={store}>
+		<App />
+	</Provider>, 
+	document.getElementById('root')
+);

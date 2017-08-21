@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather);body {
+  height: 100vh;
+  background-color: beige;
+  color: red; }
+
+.section-container {
+  background-color: beige;
+  height: 400px; }
+
+#portfolio-carousel {
+  height: 100%; }
+
+.profile-container {
+  height: 300px; }
+  .profile-container .skill-container {
+    float: left; }
+  .profile-container .skill-list {
+    height: 100%;
+    overflow: auto;
+    background-color: red; }
+    .profile-container .skill-list .skill-block {
+      height: 40px;
+      float: left; }
+      .profile-container .skill-list .skill-block .btn {
+        width: 100%; }
+    .profile-container .skill-list .skill-code-1 {
+      color: red; }
+    .profile-container .skill-list .skill-code-2 {
+      color: yellow; }
+    .profile-container .skill-list .skill-code-3 {
+      color: green; }
+
+/*# sourceMappingURL=styles.css.map*/
