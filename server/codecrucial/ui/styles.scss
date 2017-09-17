@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+
+$brand-primary: #275E6B;
+$brand-secondary: #AD743C;
+$brand-tertiary: #000000;
+$font-size: 12px;
+$section-height:500px;
+
+body {
+  height: 100vh;
+  background-color: $brand-primary;
+  color: $brand-secondary;
+}
+
+.section-container {
+	background-color:$brand-primary;
+	height:$section-height;
+}
+
+.home-container {
+	margin-top:56px;
+}
+
+@import 'components/contact/styles.scss';
+@import 'components/portfolio/styles.scss';
+@import 'components/profile/styles.scss';

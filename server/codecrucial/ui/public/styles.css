@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather);.profile-container {
+  height: 300px; }
+  .profile-container .skill-container {
+    float: left; }
+  .profile-container .skill-list {
+    height: 100%;
+    overflow: auto; }
+    .profile-container .skill-list .skill-block {
+      height: 40px;
+      float: left;
+      margin-bottom: 15px; }
+      .profile-container .skill-list .skill-block .btn {
+        width: 100%;
+        background-color: transparent;
+        border-color: red; }
+      .profile-container .skill-list .skill-block .btn:hover {
+        border-color: black; }
+    .profile-container .skill-list .active-skill .btn {
+      background-color: black; }
+    .profile-container .skill-list .skill-code-1 {
+      color: red; }
+    .profile-container .skill-list .skill-code-2 {
+      color: yellow; }
+    .profile-container .skill-list .skill-code-3 {
+      color: green; }
+.portfolio-container {
+  height: #262626; }
+  .portfolio-container .project-group {
+    background-color: transparent;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    position: relative; }
+    .portfolio-container .project-group .project-wrapper {
+      height: 100%;
+      float: left;
+      position: absolute; }
+      .portfolio-container .project-group .project-wrapper .carousel-caption {
+        color: red; }
+    .portfolio-container .project-group .project-nav {
+      position: absolute;
+      bottom: 0; }
+    .portfolio-container .project-group .forward-nav {
+      right: 0; }
+    .portfolio-container .project-group .backward-nav {
+      left: 0; }
+.contact-form {
+  margin: 0 auto; }
+body {
+  height: 100vh;
+  background-color: #275E6B;
+  color: #AD743C; }
+
+.section-container {
+  background-color: #275E6B;
+  height: 500px; }
+
+.contact-form {
+  margin: 0 auto; }
+
+.portfolio-container {
+  height: 375px; }
+  .portfolio-container .project-group {
+    background-color: transparent;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    position: relative; }
+    .portfolio-container .project-group .project-wrapper {
+      height: 100%;
+      float: left;
+      position: absolute; }
+      .portfolio-container .project-group .project-wrapper .carousel-caption {
+        color: #AD743C; }
+    .portfolio-container .project-group .project-nav {
+      position: absolute;
+      bottom: 0; }
+    .portfolio-container .project-group .forward-nav {
+      right: 0; }
+    .portfolio-container .project-group .backward-nav {
+      left: 0; }
+
+.profile-container {
+  height: 375px; }
+  .profile-container .skill-container {
+    float: left; }
+  .profile-container .skill-list {
+    height: 100%;
+    overflow: auto; }
+    .profile-container .skill-list .skill-block {
+      height: 40px;
+      float: left;
+      margin-bottom: 15px; }
+      .profile-container .skill-list .skill-block .btn {
+        width: 100%;
+        background-color: transparent;
+        border-color: #AD743C; }
+      .profile-container .skill-list .skill-block .btn:hover {
+        border-color: #000000; }
+    .profile-container .skill-list .active-skill .btn {
+      background-color: #000000; }
+    .profile-container .skill-list .skill-code-1 {
+      color: red; }
+    .profile-container .skill-list .skill-code-2 {
+      color: yellow; }
+    .profile-container .skill-list .skill-code-3 {
+      color: green; }
+
+/*# sourceMappingURL=styles.css.map*/
