@@ -6,6 +6,7 @@ import { Slider } from './slider';
 import { Home } from './home';
 import { addUserName } from './redux/actions.js';
 import { Header } from './header';
+import { Footer } from './footer';
 
 
 export class App extends Component {
@@ -17,11 +18,9 @@ export class App extends Component {
       <Router>
         <div>
           <Header pages={pages} userName={this.props.userName} />
-
-          <hr/>
-
           <Route exact path="/" component={Home}/>
           <Route path="/slider" component={Slider} />
+          <Footer year={2017} author={"Taylor Dobson"} />
         </div>
       </Router>
     );

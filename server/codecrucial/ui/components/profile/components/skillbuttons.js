@@ -10,7 +10,7 @@ export const SkillButtons = (props) => {
     			<button type="button" 
     				onClick={(e) => populateSkillDescription(key)}
     				className={"btn skill-code-" + skills[key].rating}>
-    				{key}
+    				<span className="button-text">{key}</span>
     			</button>
     		</div>
     	)}

@@ -2,6 +2,7 @@
 $brand-primary: if(global-variable-exists(brand-primary), $brand-primary, beige);
 $brand-secondary: if(global-variable-exists(brand-secondary), $brand-secondary, red);
 $brand-tertiary: if(global-variable-exists(brand-tertiary), $brand-tertiary, black);
+$brand-quadriary: if(variable-exists(brand-quadriary), $brand-quadriary, black);
 $font-size: if(global-variable-exists(font-size), $font-size, 12px);
 $section-height: if(global-variable-exists(section-height), $section-height, 400px);
 
@@ -34,26 +35,24 @@ $skill-low: if(global-variable-exists(skill-low), $skill-low, red);
 				.btn {
 					width:100%;
 					background-color:transparent;
-					border-color:$brand-secondary;
 					@include transition(all .4s ease-in-out);
+
+					.button-text {
+						font-weight:200;
+					}
 				}
 				.btn:hover {
-					border-color:$active-skill;
+					background-color:$brand-quadriary;
+					border-color:$brand-primary;
+					color:$brand-primary;
 				}
 			}
 			.active-skill {
 				.btn {
-					background-color:$active-skill;
+					background-color:$brand-quadriary;
+					border-color:$brand-primary;
+					color:$brand-primary;
 				}
-			}
-			.skill-code-1 {
-				color:$skill-low;
-			}
-			.skill-code-2 {
-				color:$skill-medium;
-			}
-			.skill-code-3 {
-				color:$skill-high;
 			}
 		}
 		.skill-description {

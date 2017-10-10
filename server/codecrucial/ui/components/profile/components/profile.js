@@ -70,9 +70,9 @@ export class Profile extends Component {
 		else {
 		  	return (
 			    <div className="section-container profile-container container-fluid">
-					<h3>
+					<h4 className="section-header">
 						This is a list of some of the things I'm good at.
-					</h3>
+					</h4>
 			  		<div className="container skill-wrapper">
 				    	<SkillButtons 
 				    		skills={Skills} 

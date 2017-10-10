@@ -1,10 +1,9 @@
 $brand-primary: if(variable-exists(brand-primary), $brand-primary, beige);
 $brand-secondary: if(variable-exists(brand-secondary), $brand-secondary, red);
 $brand-tertiary: if(variable-exists(brand-tertiary), $brand-tertiary, black);
+$brand-quadriary: if(variable-exists(brand-quadriary), $brand-quadriary, black);
 $font-size: if(variable-exists(font-size), $font-size, 12px);
 $section-height: if(variable-exists(section-height), $section-height, #333);
-$tech-background: green;
-$tech-font-color: blue;
 
 @mixin transition($transition...) {
     -moz-transition:    $transition;
@@ -13,49 +12,39 @@ $tech-font-color: blue;
     transition:         $transition;
 }
 
-.portfolio-container {
-	height:$section-height*.75;
+.welcome-container {
+	height:$section-height*.5;
 
 	* {
 		@include transition(all .75s ease-in-out);
 	}
-	.project-group {
-		background-color:transparent;
-		height:50%;
+	
+	.contact-wrapper {
 		margin:0 auto;
-		position:relative;
-		.project-wrapper {
-			height:100%;
+		overflow-y:hidden;
+		height:105px;
+		.contact-link {
+			width:25%;
 			float:left;
-			position:absolute;
-			.project-modal-wrapper {
-				position:absolute;
-				bottom:0;
-				.btn {
-					white-space: pre-wrap;
-				}
+			display:block;
+			text-align:center;
+			font-variant:small-caps;
+			i {
+				width:100%;
+				color:$brand-quadriary;
 			}
-			.carousel-caption {
-				color:$brand-secondary;
+			a {
+				width:100%;
+				color:$brand-quadriary;
 			}
 		}
-	}
-	.project-nav {
-		margin:25px auto;	
-		.next-nav {
-			float:right;
+		& .inactive {
+			margin-left: 100%;
+			left:0;
+			opacity:0;
 		}
-		.back-nav {
-			float:left;;
-		}
-	}
-
-	.tech-wrapper {
-		background-color:$tech-background;
-		color:$tech-font-color;
-		padding:20px;
-		.tech-list-wrapper {
-			padding-left:7%;
+		& .last-activated {
+			margin-right:-100%;
 		}
 	}
 }

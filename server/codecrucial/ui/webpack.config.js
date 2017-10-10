@@ -58,6 +58,11 @@ let config = {
         exclude: /node_modules/,
         include: __dirname,
       },
+      {
+        test: /\.(pdf|gif|png|jpe?g|svg)$/,
+        loader: 'file-loader?name=[path][name].[ext]',
+        include: __dirname
+      },
     ]
   },
   plugins: [
@@ -66,7 +71,9 @@ let config = {
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
-    })
+    }),
+    new webpack.optimize.UglifyJsPlugin(),
+    new OptimizeCSSAssets()
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
@@ -80,7 +87,6 @@ let config = {
 }
 
 module.exports = config;
-console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
   module.exports.plugins.push(
     new webpack.optimize.UglifyJsPlugin(),

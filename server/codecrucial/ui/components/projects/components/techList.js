@@ -4,12 +4,12 @@ export const TechList = (props) => {
     const techList = Object.keys(technologies).map((key) => {
         const categoryList = technologies[key].map((tech) => (
             <li>
-              {tech}
+              <p>{tech}</p>
             </li>
         ));
         return (
             <div className={key + "-tech-wrapper"} >
-                {key.toLowerCase()}
+                <h6>{key.toLowerCase()}</h6>
                 <ul>
                     {categoryList}
                 </ul>
@@ -18,7 +18,7 @@ export const TechList = (props) => {
       });
     return (
         <div className="tech-wrapper">
-            TECHNOLOGIES:
+            <h5>TECHNOLOGIES:</h5>
             <div className="tech-list-wrapper">
                 {techList}
             </div>

@@ -6,7 +6,7 @@ import '../styles.scss';
 import { initial_projects } from "./_projectdata";
 import { incrementPosition, initializePosition, setProjects } from './redux/actions';
 
-export class Portfolio extends Component {
+export class Projects extends Component {
 
 	constructor(props) {
 	  	super(props);
@@ -38,17 +38,17 @@ export class Portfolio extends Component {
 		const { projects, position } = this.props;
 		if(projects === undefined) {
 			return (
-				<div className="section-container portfolio-container container-fluid">
+				<div className="section-container projects-container container-fluid">
 					Please wait...
 				</div>
 			);
 		}
 		else {
 			return (
-				<div className="section-container portfolio-container container-fluid">
-					<h6>
-						Portfolio
-					</h6>
+				<div className="section-container projects-container container-fluid">
+					<h4 className="section-header">
+						These are some projects I've worked on.
+					</h4>
 					<Carousel 
 						{...this.props}
 						getCardStyle={this.getCardStyle} 
@@ -65,10 +65,10 @@ export class Portfolio extends Component {
 
 const mapStateToProps = state => {
 	return {
-		projects: state.portfolio_info.projects,
-		position: state.portfolio_info.position,
-		maxPosition: state.portfolio_info.maxPosition,
-		minPosition: state.portfolio_info.minPosition
+		projects: state.projects_info.projects,
+		position: state.projects_info.position,
+		maxPosition: state.projects_info.maxPosition,
+		minPosition: state.projects_info.minPosition
 	}
 }
 
@@ -87,9 +87,9 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const ConnectedPortfolio = connect(
+const ConnectedProjects = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Portfolio)
+)(Projects)
 
-export default ConnectedPortfolio;
+export default ConnectedProjects;

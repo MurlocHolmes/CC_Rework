@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import { WelcomeMat } from './welcomemat';
+import { Welcome } from '../../welcome';
 import { Profile } from '../../profile';
-import { Portfolio } from '../../portfolio';
-import { Contact } from '../../contact';
+import { Projects } from '../../projects';
+import { BucketList } from '../../bucketlist';
 
 export const Home = (route) => {
   return (
     <div className="home-container container-fluid">
-      <WelcomeMat welcomeMessage={route.welcomeMessage} />
+      <Welcome />
       <hr />
       <Profile />
       <hr />
-      <Portfolio />
+      <Projects />
+      <hr />
+      <BucketList />
     </div>
   )
 }

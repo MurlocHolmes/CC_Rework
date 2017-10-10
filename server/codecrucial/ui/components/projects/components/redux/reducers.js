@@ -5,7 +5,7 @@ import {
   SET_PROJECTS
 } from './actions'
 
-function portfolio_info(state = [], action) {
+function projects_info(state = [], action) {
   switch (action.type) {
     case INCREMENT_POSITION:
       return {
@@ -29,6 +29,6 @@ function portfolio_info(state = [], action) {
   }
 }
 
-export default portfolio_info;
+export default projects_info;
 
 

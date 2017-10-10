@@ -1,9 +1,0 @@
-$brand-primary: if(variable-exists(brand-primary), $brand-primary, beige);
-$brand-secondary: if(variable-exists(brand-secondary), $brand-secondary, red);
-$brand-tertiary: if(variable-exists(brand-tertiary), $brand-tertiary, black);
-$font-size: if(variable-exists(font-size), $font-size, 12px);
-$section-height: if(variable-exists(section-height), $section-height, #333);
-
-.contact-form {
-	margin:0 auto;
-}
