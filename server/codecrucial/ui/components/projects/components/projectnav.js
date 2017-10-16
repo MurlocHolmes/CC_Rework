@@ -3,7 +3,7 @@ import ProjectNavButton from './projectnavbutton';
 export const ProjectNav = (props) => {
     const { position, minPosition, maxPosition } = props;
     return (
-        <div className="project-nav col-lg-8 col-md-8 col-sm-10 col-xs-12">
+        <div className="project-nav col-sm-10">
             <ProjectNavButton 
                 {...props} 
                 visible={(position === minPosition ? 0 : 1)} 

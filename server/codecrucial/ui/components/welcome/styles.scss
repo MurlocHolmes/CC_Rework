@@ -13,7 +13,7 @@ $section-height: if(variable-exists(section-height), $section-height, #333);
 }
 
 .welcome-container {
-	height:$section-height*.5;
+	// height:$section-height*.5;
 
 	* {
 		@include transition(all .75s ease-in-out);

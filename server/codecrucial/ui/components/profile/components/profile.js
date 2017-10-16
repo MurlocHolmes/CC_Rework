@@ -69,20 +69,20 @@ export class Profile extends Component {
 		}
 		else {
 		  	return (
-			    <div className="section-container profile-container container-fluid">
-					<h4 className="section-header">
-						This is a list of some of the things I'm good at.
-					</h4>
-			  		<div className="container skill-wrapper">
-				    	<SkillButtons 
-				    		skills={Skills} 
-				    		active={skill.title} 
-				    		populateSkillDescription={this.populateSkillDescription}/>
-				    	<SkillDescription 
-				    		animateDescription={this.animateDescription}
-				    		getSkillStyle={this.getSkillStyle}
-				    		{...this.props} />
+			    <div className="profile-container container-fluid row">
+			    	<div className="col-sm-12">
+						<h4 className="section-header">
+							This is a list of some of the things I'm good at.
+						</h4>
 					</div>
+			    	<SkillButtons 
+			    		skills={Skills} 
+			    		active={skill.title} 
+			    		populateSkillDescription={this.populateSkillDescription}/>
+			    	<SkillDescription 
+			    		animateDescription={this.animateDescription}
+			    		getSkillStyle={this.getSkillStyle}
+			    		{...this.props} />
 				</div>
 			);
 		}

@@ -14,14 +14,14 @@ $tech-font-color: blue;
 }
 
 .projects-container {
-	height:$section-height*.75;
+	// height:$section-height*.75;
 
 	* {
 		@include transition(all .75s ease-in-out);
 	}
 	.project-group {
 		background-color:transparent;
-		height:50%;
+		height:200px;
 		margin:0 auto;
 		position:relative;
 		.project-wrapper {

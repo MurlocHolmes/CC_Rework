@@ -18,67 +18,71 @@ $skill-low: if(global-variable-exists(skill-low), $skill-low, red);
     transition:         $transition;
 }
 .profile-container {
-	height:$section-height*.75;
 	position:scroll;
-	.skill-wrapper {
-		height:330/500*$section-height;
-		.skill-container {
+	.skill-list {
+		overflow:auto;
+		.skill-block {
+			height:40px;
 			float:left;
-			height:100%;
-		}
-		.skill-list {
-			overflow:auto;
-			.skill-block {
-				height:40px;
-				float:left;
-				margin-bottom:15px;
-				.btn {
-					width:100%;
-					background-color:transparent;
-					@include transition(all .4s ease-in-out);
+			margin-bottom:15px;
+			.btn {
+				width:100%;
+				background-color:transparent;
+				@include transition(all .4s ease-in-out);
 
-					.button-text {
-						font-weight:200;
-					}
-				}
-				.btn:hover {
-					background-color:$brand-quadriary;
-					border-color:$brand-primary;
-					color:$brand-primary;
+				.button-text {
+					font-weight:200;
 				}
 			}
-			.active-skill {
-				.btn {
-					background-color:$brand-quadriary;
-					border-color:$brand-primary;
-					color:$brand-primary;
-				}
+			.btn:hover {
+				background-color:$brand-quadriary;
+				border-color:$brand-primary;
+				color:$brand-primary;
 			}
 		}
-		.skill-description {
-			display:flex;
-			align-items:center;
-			.description-text {
-				position:absolute;
-				opacity:1;
-				p {
-					margin-left: 25px;
-					text-align:justify;
-				}
-			}
-			.new-description {
-				opacity: 0;
-			}
-			.old-description.text-animation {
-				opacity:0;
-			}
-			.new-description.text-animation {
-				opacity:1;
-			}
-			.text-animation {
-				@include transition(opacity 1s ease-in-out);
+		.active-skill {
+			.btn {
+				background-color:$brand-quadriary;
+				border-color:$brand-primary;
+				color:$brand-primary;
 			}
 		}
-		
+	}
+	.skill-description {
+		display:flex;
+		align-items:center;
+		.description-text {
+			position:absolute;
+			opacity:1;
+			p {
+				margin-left: 25px;
+				text-align:justify;
+			}
+		}
+		.new-description {
+			opacity: 0;
+		}
+		.old-description.text-animation {
+			opacity:0;
+		}
+		.new-description.text-animation {
+			opacity:1;
+		}
+		.text-animation {
+			@include transition(opacity 1s ease-in-out);
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 769px) {
+	.skill-container {
+		height:250px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.skill-container {
+		height:300px;
 	}
 }
